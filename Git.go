@@ -7,4 +7,8 @@ func bro() {
 func main() {
 	fmt.Println("Hi guys")
 	bro()
+	what()
+}
+func what() {
+	fmt.Println("What?")
 }
