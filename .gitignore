@@ -1,2 +1,29 @@
+# Конфиденциальные данные
 .env
+
+# Скомпилированные бинарные файлы (результат работы go build)
 *.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+__debug_bin
+
+# Папка с зависимостями
+vendor/
+
+# Настройки популярных редакторов кода (IDE)
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Логи и кэш системы
+*.log
+.DS_Store
+Thumbs.db
+
