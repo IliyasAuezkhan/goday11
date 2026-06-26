@@ -162,7 +162,7 @@ goday11/
 
 1. **Клонируйте репозиторий и перейдите в папку:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/IliyasAuezkhan/goday11/tree/main
    cd goday11
    ```
 2. **Создайте файл `.env`** в корне проекта:
