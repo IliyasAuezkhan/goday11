@@ -8,7 +8,7 @@ func joker() {
 func bro() {
 	fmt.Println("Hi bro!")
 }
-func main() {
+func RR() {
 	fmt.Println("Hi guys")
 	bro()
 	what()

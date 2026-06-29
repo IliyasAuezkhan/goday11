@@ -1,6 +1,6 @@
 package main
 import(."fmt")
-func main() {
+func lll() {
 	for i := range 5 {
 		Println(i)
 	}
