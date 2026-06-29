@@ -1,0 +1,41 @@
+services:
+  # Настройка вашего Go-сервера
+  - type: web
+    name: goday11-api
+    runtime: go
+    plan: free
+    buildCommand: go build -o main .
+    startCommand: ./main
+    envVars:
+      - key: APP_PORT
+        value: "8080" # Render пробросит порт наружу, но внутри приложения останется 8080
+      - key: JWT_SECRET
+        value: "my_ultra_secret_key"
+      # Автоматически связываем Go-код с создаваемой ниже базой данных:
+      - key: DB_HOST
+        fromDatabase:
+          name: goday11-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: goday11-db
+          property: port
+      - key: DB_USER
+        fromDatabase:
+          name: goday11-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: goday11-db
+          property: password
+      - key: DB_NAME
+        fromDatabase:
+          name: goday11-db
+          property: database
+
+databases:
+  # Настройка бесплатной базы данных PostgreSQL
+  - name: goday11-db
+    plan: free
+    databaseName: mydb
+    user: myuser
